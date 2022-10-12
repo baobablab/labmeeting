@@ -40,7 +40,7 @@ All the lab fellows are welcome.
 
 Participating is really easy:
 
-* First you have to plan the talk by filling the [online form](https://github.com/baobablab/labmeeting/issues)
+* First you have to plan the talk by filling the [online form](https://github.com/baobablab/labmeeting/issues/new/choose)
 or discussing with one of the organizer at the coffe break.</li>
 * Next, you will prepare a **Lightning Talk**, which is a 5-10 minutes blasts of information about a particular topic or
 question of interest to the group. **Note** no overflow will be accepted.
@@ -50,4 +50,4 @@ question of interest to the group. **Note** no overflow will be accepted.
 </header>
 
 If you have any suggestion about the meeting you can directly access the
-[online idea box](https://github.com/baobablab/labmeeting/issues).
+[online idea box](https://github.com/baobablab/labmeeting/issues/new/choose).
