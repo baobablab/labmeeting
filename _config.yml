@@ -2,8 +2,8 @@
 # Site settings
 title: Baobab
 subtitle: lab Meeting 
-baseurl:
-url: labmeeting #https://baobablab.github.io/
+baseurl: labmeeting
+url: https://baobablab.github.io/
 
 
 # Contacts
