@@ -6,52 +6,55 @@ permalink: /index.html
 
 <br/>
 
-## Download the openBHB dataset
+<ul class="actions">
+<center>
+    <li><a href="{{site.url}}{{site.baseurl}}/events" class="button medium">Previous events</a></li>
+    <li><a href="{{site.url}}{{site.baseurl}}/participating" class="button medium">Participating</a></li>
+    <li><a href="{{site.url}}{{site.baseurl}}/contacts" class="button medium">Contact</a></li>
+</center>
+</ul>
 
-The openBHB dataset is freely available for download on the [IEEE DataPort](https://ieee-dataport.org/open-access/openbhb-multi-site-brain-mri-dataset-age-prediction-and-debiasing) service.
+{% assign today = site.time | date: '%s' %}
+{% assign events_sorted = site.events | sort: 'date' | reverse  %}
+{% assign next_days = -1000 %}
+{% assign next_date = 'not meeting planed' %}
+{% for item in events_sorted %}
+    {% assign start = item.date | date: '%s' %}
+    {% assign seconds_since = today | minus: start %}
+    {% assign hours_since = seconds_since | divided_by: 60 | divided_by: 60 %}
+    {% assign days_since = hours_since | divided_by: 24 %}
+    {% if days_since <= 0 and next_days < days_since %}
+        {% assign next_days = days_since %}
+        {% assign next_date = item.date | date: '%-d %B %Y' %}
+    {% endif %}
+{% endfor %}
+    
 
-## Contents
+<header class="major">
+  <h2>Next Meeting</h2>
+</header>
 
-The content of the site is outlined below and can also be accessed using the top left navigation bar:
+<span style="background-color: #FFFF00;font-size: larger">{{next_date}}</span> at NeuroSpin in the Galleria.
 
-1. [Dataset]({{site.url}}{{site.baseurl}}/dataset)
-2. [Challenges]({{site.url}}{{site.baseurl}}/challenges)
-3. [Publications]({{site.url}}{{site.baseurl}}/publications)
-4. [Members]({{site.url}}{{site.baseurl}}/people)
-5. [Collaborators]({{site.url}}{{site.baseurl}}/collaborators)
-6. [Roadmap]({{site.url}}{{site.baseurl}}/roadmap)
-
-## Reproducible research
-
-The preprocessing and quality control was performed using container technologies using the [brainprep](https://brainprep.readthedocs.io) module.
-
-## Collaborative benchmarking
-
-The primary idea of the openBHB project is to provide to the community a [large benchmarking dataset]({{site.url}}{{site.baseurl}}/dataset).
-The dataset is splitted in two: 1) the openBHB dataset that is publicaly available for participants to train new models, and 2) the openBHB and privateBHB test sets that are used to compare the performances of the submitted models.
-All challenges built upon the openBHB dataset are described in the [challenges section]({{site.url}}{{site.baseurl}}/challenges).
-
-
-{% assign challenges_sorted = site.challenges | sort: 'added' | reverse  %}
 
 <!-- Section -->
 <section>
     <header class="major">
-      <h2>Last Challenges</h2>
+      <h2>Lightning Talks</h2>
     </header>
     <div class="posts">
-    {% for item in challenges_sorted limit: 6 %}
-      <article>
-        <h3>{{ item.title }}</h3>
-        <a href="{{site.url}}{{site.baseurl}}{{item.url}}" class="image"><img src="{{site.url}}{{site.baseurl}}/images/resources/{{item.icon}}" alt="" /></a>
-        <p>{{ item.teasing }}</p>
-        <ul class="actions">
-            <center>
-            <li><a href="{{site.url}}{{site.baseurl}}{{item.url}}" class="button medium">More info</a></li>
-            <li><a href="{{item.challenge_url}}" class="button medium">Challenge page</a></li>
-            </center>
-        </ul>
-      </article>
+    {% for item in events_sorted %}
+        {% assign start = item.date | date: '%s' %}
+        {% assign seconds_since = today | minus: start %}
+        {% assign hours_since = seconds_since | divided_by: 60 | divided_by: 60 %}
+        {% assign days_since = hours_since | divided_by: 24 %}
+        {% if days_since <= 0 %}
+            <article>
+              <h3>{{ item.title }}</h3>
+              <a class="image"><img src="{{site.url}}{{site.baseurl}}/images/resources/{{item.icon}}" alt="" /></a>
+              <p>{{ item.teasing }}</p>
+            </article>
+        {% endif %}
     {% endfor %}
     </div>
 </section>

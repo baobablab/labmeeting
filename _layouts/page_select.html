@@ -29,7 +29,7 @@
                         <span class="image main"><img src="{{site.url}}{{site.baseurl}}/{{page.image}}" alt="" /></span>
                     {% endif %}
 
-                    <b> Filter by laboratories:</b>
+                    <b> Filter events by:</b>
                     <select class="dropdown-menu"></select>
 
                     {{ content }}
@@ -57,10 +57,6 @@
         {% assign unique_items = unique_items | push: key %}
         {% assign current_unique_items = '' | split: ',' %}
       {% endunless %}
-      {% unless current_unique_items contains item.subcat %}
-        {% assign unique_items = unique_items | push: item.subcat %}
-        {% assign current_unique_items = current_unique_items | push: item.subcat %}
-      {% endunless %}
       {% assign previous = item.cat %}
 {% endfor %}
 
@@ -79,6 +75,7 @@ $(document).ready(function() {
     $(".dropdown-menu").change(function () {
         var item = this.value;
         {% for item in unique_items %}
+            console.log(item);
             {% assign key = item | replace: "~", "" %}
             if (item == "Choose") {
                 $(".{{key|downcase|replace: " ", "-"}}").show();

@@ -1,0 +1,24 @@
+---
+layout: page
+entry: contacts
+permalink: contacts.html
+---
+
+{% assign contacts_sorted = site.contacts | sort: 'name' %}
+
+
+<div class="content list people">
+  {% for profile in contacts_sorted %}
+    <div class="list-item-people">
+      <p class="list-post-title">
+        <a>
+        {% if profile.avatar %}
+            <img width="200" src="{{site.url}}{{site.baseurl}}/images/people/{{profile.avatar}}"></a>
+        {% else %}
+            <img width="200" src="{{site.url}}{{site.baseurl}}/images/people/default.png"></a>
+        {% endif %}
+        <a class="name">{{ profile.name }}</a>
+      </p>
+    </div>
+  {% endfor %}
+</div>
