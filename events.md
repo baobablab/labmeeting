@@ -4,6 +4,7 @@ entry: events
 permalink: events.html
 ---
 
+
 <header class="major">
   <h2> Upcoming and previous events </h2>
 </header>
@@ -20,7 +21,7 @@ permalink: events.html
     {% assign days_since = hours_since | divided_by: 24 %}
     {% if days_since < site.expiration_events %}
         <li>
-          <div class="text-justify  {{entry.cat}}">
+          <div class="text-justify  {{entry.cat | replace: " ", "-" | downcase}}">
             <b>{{entry.date | date: '%-d %B %Y' }}</b>
             {% if entry.presentation_url %}
               <a href="{{entry.presentation_url}}" class="icon fa-download" target="_blank"><span class="label">URL</span></a>

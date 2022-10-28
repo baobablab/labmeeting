@@ -34,7 +34,7 @@ permalink: /index.html
   <h2>Next Meeting</h2>
 </header>
 
-<span style="background-color: #FFFF00;font-size: larger">{{next_date}}</span> at NeuroSpin in the Galleria.
+<span style="background-color: #FFFF00;font-size: larger">{{next_date}}</span> at NeuroSpin in the ShowRoom from 2 to 3pm.
 
 
 <!-- Section -->
@@ -42,20 +42,26 @@ permalink: /index.html
     <header class="major">
       <h2>Lightning Talks</h2>
     </header>
-    <div class="posts">
-    {% for item in events_sorted %}
-        {% assign start = item.date | date: '%s' %}
-        {% assign seconds_since = today | minus: start %}
-        {% assign hours_since = seconds_since | divided_by: 60 | divided_by: 60 %}
-        {% assign days_since = hours_since | divided_by: 24 %}
-        {% if days_since <= 0 %}
-            <article>
-              <h3>{{ item.title }}</h3>
-              <a class="image"><img src="{{site.url}}{{site.baseurl}}/images/resources/{{item.icon}}" alt="" /></a>
-              <p>{{ item.teasing }}</p>
-            </article>
-        {% endif %}
-    {% endfor %}
-    </div>
+    {% if next_date != 'not meeting planed' %}
+        <div class="posts">
+        {% for item in events_sorted %}
+            {% assign start = item.date | date: '%s' %}
+            {% assign seconds_since = today | minus: start %}
+            {% assign hours_since = seconds_since | divided_by: 60 | divided_by: 60 %}
+            {% assign days_since = hours_since | divided_by: 24 %}
+            {% if next_days == days_since %}
+                <article>
+                <section style="width: 100%; float: left">
+                  <div style=" width: 30%; height: 150px; float: right">
+                    <a class="image"><img src="{{site.url}}{{site.baseurl}}/images/resources/{{item.icon}}" alt="" /></a>
+                  </div>
+                  <p><b>{{item.author}}</b>: {{ item.title }}
+                  {{ item.teasing }}</p>
+                </section>
+                </article>
+            {% endif %}
+        {% endfor %}
+        </div>
+    {% endif %}
 </section>
 

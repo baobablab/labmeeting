@@ -3,6 +3,7 @@ layout: page
 title: Participating
 ---
 
+
 <header class="major">
   <h2>What</h2>
 </header>
@@ -16,7 +17,7 @@ for introducing newcomers, hot topics, new libraries, ...
   <h2>Where</h2>
 </header>
 
-We meet at NeuroSpin in the Galleria.
+We meet at NeuroSpin in the ShowRoom.
 
 <header class="major">
   <h2>When</h2>
