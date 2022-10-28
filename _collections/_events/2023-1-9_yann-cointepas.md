@@ -1,6 +1,6 @@
 ---
 layout:
-title: CATI: harmonisation des données pour l'imagerie de population
+title: CATI - harmonisation des données pour l'imagerie de population
 author: Yann Cointepas
 cat: myBug in 180s
 teasing: 
