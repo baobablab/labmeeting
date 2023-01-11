@@ -1,10 +1,10 @@
 ---
 layout:
-title: Classifying healthy vs ASD patients in the EU-AIMS cohort
-author: Cyril Brzenczek
+title: A venir
+author: Clément Langlet
 cat: Lightning talk
 teasing: 
 presentation_url: https://cea.talkspirit.com/#/l/drives/8bdnaa?clip=all&type=drive
 icon: default.png
-date: 2023-1-9
+date: 2023-02-06
 ---
