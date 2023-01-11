@@ -1,6 +1,6 @@
 ---
 name: Idea box!
-about: You can suggest any idea to imporve the lab meeting.
+about: Got any idea to improve the lab meeting?.
 title: ''
 labels: ''
 assignees: ''

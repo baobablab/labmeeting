@@ -1,10 +1,14 @@
 ---
-name: New lightning talk!
+name: New talk!
 about: Wanna make a talk.
 title: ''
 labels: ''
 assignees: ''
 ---
+
+**Talk organization**
+- presentation + questions: 15 minutes
+- presentation: 10 minutes
 
 **Talk details**
 - Title:

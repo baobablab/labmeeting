@@ -1,6 +1,6 @@
 ---
 name: News!
-about: Add a news.
+about: Just published a new paper? Saw a new call for funding? Let everyone know!
 title: ''
 labels: ''
 assignees: ''
