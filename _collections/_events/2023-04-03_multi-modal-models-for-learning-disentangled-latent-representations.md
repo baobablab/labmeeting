@@ -1,7 +1,7 @@
 ---
 layout:
-title: Emeline Pommier
-author: Multi-modal models for learning disentangled latent representations
+title: Multi-modal models for learning disentangled latent representations
+author: Emeline Pommier
 cat: MyWork in 180s
 teasing: 
 presentation_url: https://cea.talkspirit.com/#/l/drives/8bdnaa?clip=all&type=drive
