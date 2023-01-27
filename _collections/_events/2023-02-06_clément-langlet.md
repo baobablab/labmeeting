@@ -1,6 +1,6 @@
 ---
 layout:
-title: Constellation: structural connectivity-based parcellations
+title: Constellation structural connectivity-based parcellations
 author: Clément Langlet
 cat: Lightning talk
 teasing:
