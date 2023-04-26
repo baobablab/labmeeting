@@ -1,6 +1,6 @@
 ---
 layout:
-title: Towards in vivo mapping of cyto- and myelo architecture of functional networks: the iCortex cohort
+title: Towards in vivo mapping of cyto- and myelo architecture of functional networks - the iCortex cohort
 author: Bosco Taddei
 cat: Lightning talk
 teasing: 
