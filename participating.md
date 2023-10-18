@@ -23,7 +23,7 @@ We meet at NeuroSpin in the ShowRoom.
   <h2>When</h2>
 </header>
 
-The first monday of each month at 2pm.
+The second monday of each month at 3pm.
 While the main session should occupy less than an hour, with lighting talks
 and a discussion session, the following gouter could last forever.
 See the [topics list]({{site.url}}{{site.baseurl}}/events.html)

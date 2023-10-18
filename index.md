@@ -34,7 +34,7 @@ permalink: /index.html
   <h2>Next Meeting</h2>
 </header>
 
-<span style="background-color: #FFFF00;font-size: larger">{{next_date}}</span> at NeuroSpin in the ShowRoom from 2 to 3pm.
+<span style="background-color: #FFFF00;font-size: larger">{{next_date}}</span> at NeuroSpin in the ShowRoom from 3 to 4pm.
 
 
 <!-- Section -->
